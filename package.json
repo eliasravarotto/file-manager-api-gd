@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "generate-token": "node generateToken.js",
+    "upload-file": "node uploadFile.js"
+  },
+  "dependencies": {
+    "googleapis": "^39.2.0"
+  }
+}

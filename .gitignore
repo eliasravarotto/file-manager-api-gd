@@ -1,0 +1,9 @@
+# Credentials API GD
+credentials.json
+token.json
+
+# Dependency directory
+node_modules
+
+# Files to upload
+toUpload/*

@@ -3,7 +3,7 @@ const fsp = require('fs').promises;
 
 const { uploadFile } = require('./services/fileServices');
 const { authorize } = require('./services/authGDriveService');
-const { CREDENTIALS_PATH, UPLOAD_FOLDER_PATH } = require('./constants/commons');
+const { CREDENTIALS_PATH, UPLOAD_FOLDER_PATH, GD_FOLDER_ID } = require('./constants/commons');
 const { IMAGE_JPEG_MIME_TYPE } = require('./constants/driveMimeTypes');
 const { generateFileName } = require('./utils/utils');
 
@@ -15,7 +15,8 @@ main = async () => {
         const fileName = generateFileName();
 
         const fileMetadata = {
-            'name': fileName
+            'name': fileName,
+            'parents': [GD_FOLDER_ID]
         };
         const media = {
             mimeType: IMAGE_JPEG_MIME_TYPE,

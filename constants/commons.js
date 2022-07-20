@@ -4,3 +4,5 @@
 exports.TOKEN_PATH = 'token.json';
 exports.CREDENTIALS_PATH = 'credentials.json';
 exports.UPLOAD_FOLDER_PATH = './toUpload/';
+
+exports.GD_FOLDER_ID = '';
